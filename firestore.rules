@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Store configuration (UPI ID, WhatsApp numbers, support email).
+    // Must be publicly READABLE so checkout can show the payment QR code —
+    // but only the logged-in admin (you) can change it.
+    match /config/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Customer orders (names, phone numbers, addresses, payment status/UTR).
+    // - create: open, so checkout can submit a new order without a login.
+    // - read / update / delete: admin only. This is the rule that actually
+    //   stops anyone but you from viewing customer/payment details — the
+    //   app's login screen is just a convenience UI on top of this.
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}

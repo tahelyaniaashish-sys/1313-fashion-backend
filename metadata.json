@@ -1,0 +1,6 @@
+{
+  "name": "1313 Fashion",
+  "description": "Minimalist luxury streetwear brand rooted in 'Tera' (तेरा) - Divine grace, unseen energy, and high-end heavyweight apparel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
