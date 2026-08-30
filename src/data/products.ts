@@ -3,8 +3,12 @@ import { Product, WisdomReflection, StoreConfig } from '../types';
 import heroBg from '../assets/images/hero_ethereal_bg_1786551336453.jpg';
 import officialLogoImg from '../assets/images/official_1313_logo_exact_1786607417883.jpg';
 import legacyFrontImg from '../assets/images/legacy_tee_clean_1786553053741.jpg';
-import lookAgainBackImg from '../assets/images/look_again_clean_1786553073077.jpg';
-import unseenForceBackImg from '../assets/images/unseen_force_clean_1786553091422.jpg';
+import lookAgainFrontNewImg from '../assets/images/look_again_front_new.png';
+import lookAgainBackNewImg from '../assets/images/look_again_back_new.png';
+import lookAgainGalleryImg from '../assets/images/look_again_gallery_new.png';
+import unseenForceFrontNewImg from '../assets/images/unseen_force_front_new.png';
+import unseenForceBackNewImg from '../assets/images/unseen_force_back_new.png';
+import unseenForceGalleryImg from '../assets/images/unseen_force_gallery_new.png';
 import packagingBoxImg from '../assets/images/actual_frosted_packaging_1786607444303.jpg';
 
 export { heroBg, packagingBoxImg, officialLogoImg };
@@ -89,10 +93,11 @@ export const PRODUCTS: Product[] = [
     badge: "ARTWORK EDITION",
     defaultColor: "Skin",
     colorways: [
-      { name: "Skin", hex: "#f4f0e6", bgClass: "bg-[#f4f0e6]", frontImage: lookAgainBackImg, backImage: lookAgainBackImg }
+      { name: "Skin", hex: "#f4f0e6", bgClass: "bg-[#f4f0e6]", frontImage: lookAgainFrontNewImg, backImage: lookAgainBackNewImg }
     ],
-    frontImage: lookAgainBackImg,
-    backImage: lookAgainBackImg,
+    frontImage: lookAgainFrontNewImg,
+    backImage: lookAgainBackNewImg,
+    galleryImage: lookAgainGalleryImg,
     frontDetailsText: "Minimal 'LOOK AGAIN.' chest typography + '1313' lower hem seal.",
     backDetailsText: "Fish gazing into a mirror reflection showing a slender surface line, representing an infinitely greater, grander truth.",
     printDetails: {
@@ -120,10 +125,11 @@ export const PRODUCTS: Product[] = [
     hasPlacementOptions: true,
     hasTaglineStyles: true,
     colorways: [
-      { name: "Deep Black", hex: "#0f0f0f", bgClass: "bg-neutral-900", frontImage: unseenForceBackImg, backImage: unseenForceBackImg }
+      { name: "Deep Black", hex: "#0f0f0f", bgClass: "bg-neutral-900", frontImage: unseenForceFrontNewImg, backImage: unseenForceBackNewImg }
     ],
-    frontImage: unseenForceBackImg,
-    backImage: unseenForceBackImg,
+    frontImage: unseenForceFrontNewImg,
+    backImage: unseenForceBackNewImg,
+    galleryImage: unseenForceGalleryImg,
     frontDetailsText: "Minimalist 1313 chest placement (Option A: Left Chest, Option B: Center, Option C: Upper Chest).",
     backDetailsText: "Glass fist broken into pieces, held together in powerful alignment by the unseen energy of the Almighty.",
     printDetails: {
