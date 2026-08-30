@@ -141,8 +141,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             isLight ? 'bg-stone-100 border-stone-200' : 'bg-neutral-900 border-neutral-800'
           }`}>
             <img
-              src={product.frontImage}
-              alt={`${product.title} ${viewAngle}`}
+              src={
+                viewAngle === 'front'
+                  ? (selectedColor.frontImage || product.frontImage)
+                  : (selectedColor.backImage || product.backImage)
+              }
+              alt={`${product.title} ${selectedColor.name} ${viewAngle}`}
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center transition-all duration-300"
             />
@@ -358,6 +362,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   {product.story.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
+                  {product.galleryImage && (
+                    <img
+                      src={product.galleryImage}
+                      alt={`${product.title} full collection look`}
+                      referrerPolicy="no-referrer"
+                      className={`w-full rounded-xl border mt-4 ${isLight ? 'border-stone-200' : 'border-neutral-800'}`}
+                    />
+                  )}
                 </div>
               )}
 

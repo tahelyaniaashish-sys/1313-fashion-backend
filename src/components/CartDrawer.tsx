@@ -125,7 +125,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 >
                   {/* Thumbnail */}
                   <img
-                    src={item.product.frontImage}
+                    src={item.selectedColor.frontImage || item.product.frontImage}
                     alt={item.product.title}
                     referrerPolicy="no-referrer"
                     className={`w-20 h-24 object-cover object-center rounded-lg border shrink-0 ${

@@ -2,7 +2,10 @@ import { Product, WisdomReflection, StoreConfig } from '../types';
 
 import heroBg from '../assets/images/hero_ethereal_bg_1786551336453.jpg';
 import officialLogoImg from '../assets/images/official_1313_logo_exact_1786607417883.jpg';
-import legacyFrontImg from '../assets/images/legacy_tee_clean_1786553053741.jpg';
+import legacyBlackFrontNewImg from '../assets/images/legacy_black_front_new.png';
+import legacyBlackBackNewImg from '../assets/images/legacy_black_back_new.png';
+import legacyWhiteFrontNewImg from '../assets/images/legacy_white_front_new.png';
+import legacyWhiteBackNewImg from '../assets/images/legacy_white_back_new.png';
 import lookAgainFrontNewImg from '../assets/images/look_again_front_new.png';
 import lookAgainBackNewImg from '../assets/images/look_again_back_new.png';
 import lookAgainGalleryImg from '../assets/images/look_again_gallery_new.png';
@@ -63,11 +66,11 @@ export const PRODUCTS: Product[] = [
     badge: "SIGNATURE DROP 1",
     defaultColor: "Deep Black",
     colorways: [
-      { name: "Deep Black", hex: "#0f0f0f", bgClass: "bg-neutral-900", frontImage: legacyFrontImg, backImage: legacyFrontImg },
-      { name: "Classic White", hex: "#ffffff", bgClass: "bg-white", frontImage: legacyFrontImg, backImage: legacyFrontImg }
+      { name: "Deep Black", hex: "#0f0f0f", bgClass: "bg-neutral-900", frontImage: legacyBlackFrontNewImg, backImage: legacyBlackBackNewImg },
+      { name: "Classic White", hex: "#ffffff", bgClass: "bg-white", frontImage: legacyWhiteFrontNewImg, backImage: legacyWhiteBackNewImg }
     ],
-    frontImage: legacyFrontImg,
-    backImage: legacyFrontImg,
+    frontImage: legacyBlackFrontNewImg,
+    backImage: legacyBlackBackNewImg,
     frontDetailsText: "3D Metallic Bronze Gold '1313 FASHION' emblem raised chest print.",
     backDetailsText: "Gothic Blackletter typography across upper shoulder blades: 'It's yours, own it.'",
     printDetails: {

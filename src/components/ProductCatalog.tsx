@@ -128,8 +128,8 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
 
                   {/* Main Product Image */}
                   <img
-                    src={product.frontImage}
-                    alt={`${product.title} ${currentView}`}
+                    src={isFront ? (currentColor.frontImage || product.frontImage) : (currentColor.backImage || product.backImage)}
+                    alt={`${product.title} ${currentColor.name} ${currentView}`}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 cursor-pointer filter contrast-105"
                     onClick={() => onSelectProduct(product, currentColor)}

@@ -21,6 +21,7 @@ export interface Product {
   defaultColor: string;
   frontImage: string;
   backImage: string;
+  galleryImage?: string;
   frontDetailsText: string;
   backDetailsText: string;
   printDetails: {
